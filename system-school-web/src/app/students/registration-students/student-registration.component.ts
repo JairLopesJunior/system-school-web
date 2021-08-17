@@ -24,7 +24,7 @@ export class StudentRegistrationComponent implements OnInit{
                 alert("Salvo com sucesso.");
                 this.studentListComponent.retrieveAll();
             },
-            error: err => console.log('Error', JSON.stringify(err.error.error))
+            error: err => console.log('Error: ', JSON.stringify(err.error.error))
         });
     }
 }

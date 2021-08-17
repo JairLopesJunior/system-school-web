@@ -24,7 +24,7 @@ export class CourseRegistrationComponent implements OnInit{
                 alert("Salvo com sucesso.");
                 this.courseListComponent.retrieveAll();
             },
-            error: err => console.log('Error', JSON.stringify(err.error.error))
+            error: err => console.log('Error: ', JSON.stringify(err.error.error))
         });
     }
 }

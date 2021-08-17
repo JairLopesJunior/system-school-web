@@ -23,7 +23,7 @@ export class StudentEditComponent implements OnInit{
     save(): void {
         this.studentService.save(this.student).subscribe({
             next: success => alert("Alterado com sucesso."),
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 

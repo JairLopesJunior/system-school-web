@@ -40,7 +40,7 @@ export class RegistrationComponent implements OnInit{
                 this._courses = courses;
                 this.courseList = this._courses;
             },
-            error: err => console.log('Error', JSON.stringify(err.error.error))
+            error: err => console.log('Error: ', JSON.stringify(err.error.error))
         })
     }
 
@@ -50,7 +50,7 @@ export class RegistrationComponent implements OnInit{
                 this._students = students;
                 this.studentList = this._students;
             },
-            error: err => console.log('Error', JSON.stringify(err.error.error))
+            error: err => console.log('Error: ', JSON.stringify(err.error.error))
         })
     }
 

@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~bootstrap/dist/css/bootstrap.min.css'
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    background-color: #F5F5F5;
+}
+
+fieldset {
+    border: 1px solid #999;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button {
+    width: 5rem;
+}

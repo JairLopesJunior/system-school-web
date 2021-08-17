@@ -1,44 +1,59 @@
-<h2>Registration</h2>
+<div class="row" >
+    <div class="col text-center">
+        <h2>Registration</h2>
+    </div>
+</div>
 
-<div class="container">        
+<div class="container" style="margin-bottom: 4rem;">        
     <form #registerForm="ngForm" style="display: flex; justify-content: center;">
-        <div class="btn-group" style="margin-right: 1rem;">
-            <div class="form-group" style="margin-right: 1rem">
-                <label for="course">Courses:</label>
-                <select [(ngModel)]="register.code_course" name="code_course" class="form-control">
-                    <option disabled>Select Courses</option>
-                    <option *ngFor="let course of courseList">{{ course.id }}</option>
-                </select>
+        <fieldset>
+            <div class="btn-group" style="margin-right: 1rem;">
+                <div class="form-group" style="margin-right: 1rem">
+                    <label for="course">Courses:</label>
+                    <select [(ngModel)]="register.code_course" name="code_course" class="form-control">
+                        <option disabled>Select Courses</option>
+                        <option *ngFor="let course of courseList">{{ course.id }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="student">Students:</label>
+                    <select [(ngModel)]="register.code_student" name="code_student" class="form-control">
+                        <option disabled>Select Students</option>
+                        <option *ngFor="let student of studentList">{{ student.id }}</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="form-group">
-                <label for="student">Students:</label>
-                <select [(ngModel)]="register.code_student" name="code_student" class="form-control">
-                    <option disabled>Select Students</option>
-                    <option *ngFor="let student of studentList">{{ student.id }}</option>
-                </select>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <button style="width: 6rem;" (click)="save()" class="btn btn-primary">Register</button>
+                </div>
             </div>
-        </div>
-
-        <div class="row mt-4">
-            <div class="col text-center">
-                <button style="width: 7vw;" (click)="save()" class="btn btn-primary">Register</button>
-            </div>
-        </div>
+        </fieldset>
     </form>
 </div>
 
-<form #registerForm="ngForm">
-    <div class="row mt-4">
-        <div class="col">
-            <label class="bmd-label-floating" style="color: black">Student Code *</label>
-            <input [(ngModel)]="studentCode" name="studentCode" type="number" class="form-control">
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col text-center">
-            <button style="width: 5vw;" (click)="deleteById()" class="btn btn-danger mt-4">Delete</button>
-        </div>
-    </div>
-</form>
+<div class="row">
+    <h2>Delete Student</h2>
+</div>
+
+<div class="container"> 
+    <form #registerForm="ngForm">
+        <fieldset>
+            <div class="row mt-4">
+                <div class="col">
+                    <label class="bmd-label-floating" style="color: black">Student Code *</label>
+                    <input [(ngModel)]="studentCode" name="studentCode" type="number" class="form-control">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center">
+                    <button style="width: 5vw;" (click)="deleteById()" class="btn btn-danger mt-4">Delete</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</div>

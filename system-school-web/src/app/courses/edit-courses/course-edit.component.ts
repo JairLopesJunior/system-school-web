@@ -16,14 +16,14 @@ export class CourseEditComponent implements OnInit{
     ngOnInit(): void {
         this.courseService.retrieveById(Number(this.activatedRoute.snapshot.paramMap.get('id'))).subscribe({
             next: course => this.course = course,
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         });
     }
 
     save(): void {
         this.courseService.save(this.course).subscribe({
             next: success => alert("Alterado com sucesso."),
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 

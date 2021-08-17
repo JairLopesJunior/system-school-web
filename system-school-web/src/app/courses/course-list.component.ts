@@ -25,7 +25,7 @@ export class CourseListComponent implements OnInit{
                 this._courses = courses;
                 this.filteredCourses = this._courses;
             },
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 
@@ -35,7 +35,7 @@ export class CourseListComponent implements OnInit{
                 alert("Deletado com sucesso.");
                 this.retrieveAll();
             },
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 
@@ -45,7 +45,7 @@ export class CourseListComponent implements OnInit{
                 alert("Salvo com sucesso.");
                 this.retrieveAll();
             },
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 }

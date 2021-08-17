@@ -3,18 +3,23 @@
 <hr/>
 
 <form #studentForm="ngForm">
+    <fieldset>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Student:</label>    
+            <div class="col-sm-10">
+                <input [(ngModel)]="student.name" required name="student" #studentName="ngModel" [ngClass]="{'is-invalid': studentName.invalid}" class="form-control">
 
-    <div class="form-group row">
-        <label class="col-sm-2 col-form-label">Student:</label>    
-        <div class="col-sm-10">
-            <input [(ngModel)]="student.name" required name="student" #studentName="ngModel" [ngClass]="{'is-invalid': studentName.invalid}" class="form-control">
+                <div class="invalid-feedback">
+                    <span>Student student is required</span>
+                </div>
+            </div>        
+        </div>
 
-            <div class="invalid-feedback">
-                <span>Student student is required</span>
+        <div class="row">
+            <div class="col text-center">
+                <button [routerLink]="['/students']" class="btn btn-secondary mt-4" style="margin-right: 0.5rem;">Back</button>
+                <button [disabled]="studentForm.invalid" (click)="save()" class="btn btn-primary  mt-4">Save</button>
             </div>
-        </div>        
-    </div>
-
-    <button style="width: 5vw;" [routerLink]="['/students']" class="btn btn-secondary mr-2">Back</button>
-    <button style="width: 5vw;" [disabled]="studentForm.invalid" (click)="save()" class="btn btn-primary">Save</button>
+        </div>
+    </fieldset>
 </form>

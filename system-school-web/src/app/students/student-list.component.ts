@@ -25,7 +25,7 @@ export class StudentListComponent implements OnInit{
                 this._students = students;
                 this.filteredStudents = this._students;
             },
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 
@@ -35,7 +35,7 @@ export class StudentListComponent implements OnInit{
                 alert("Deletado com sucesso.");
                 this.retrieveAll();
             },
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 
@@ -45,7 +45,7 @@ export class StudentListComponent implements OnInit{
                 alert("Salvo com sucesso.");
                 this.retrieveAll();
             },
-            error: err => alert('Error' + JSON.stringify(err.error.error))
+            error: err => alert('Error: ' + JSON.stringify(err.error.error))
         })
     }
 }
