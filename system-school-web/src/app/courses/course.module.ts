@@ -5,12 +5,14 @@ import { CommonModule } from '@angular/common';
 import { CourseListComponent } from './course-list.component';
 import { CourseRegistrationComponent } from './registration-courses/course-registration.component';
 import { CourseEditComponent } from './edit-courses/course-edit.component';
+import { HomeComponent } from '../shared/components/home/home.component';
 
 @NgModule({
     declarations: [
         CourseListComponent,
         CourseEditComponent,
-        CourseRegistrationComponent
+        CourseRegistrationComponent,
+        HomeComponent
     ],
     imports: [
         CommonModule,
@@ -21,6 +23,12 @@ import { CourseEditComponent } from './edit-courses/course-edit.component';
             },
             {
                 path: 'course/edit/:id', component: CourseEditComponent
+            },
+            {
+                path: '', component: HomeComponent
+            },
+            {
+                path: 'home', component: HomeComponent
             }
         ])
     ]

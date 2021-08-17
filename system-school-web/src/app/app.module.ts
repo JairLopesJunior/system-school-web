@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,11 +21,6 @@ import { RegisterModule } from './registrations/register.module';
     StudentModule,
     RegisterModule,
     SharedModule,
-    RouterModule.forRoot([
-      {
-        path: '', redirectTo: 'courses', pathMatch: 'full'
-      }
-    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

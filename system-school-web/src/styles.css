@@ -15,3 +15,13 @@ fieldset {
 button {
     width: 5rem;
 }
+
+#container-imagem {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    background: url('assets/images/school.jpg') no-repeat bottom center scroll;
+    background-position: 30% 45%;
+    background-size: cover;
+}
