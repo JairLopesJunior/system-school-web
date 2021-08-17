@@ -1,0 +1,25 @@
+<app-student-registration></app-student-registration>
+
+<div class="table-responsive-sm" >
+    <h2>Student List</h2>
+    <table class="table table-striped mt-4">
+
+        <thead>
+            <tr>
+                <th style="width: 84%">Name</th>
+                <th style="width: 16%">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor='let c of filteredStudents'>
+                
+                <td style="width: 84%;">{{ c.name }}</td>
+                <td style="width: 16%">
+                    <a [routerLink]="['/student/edit', c.id]" style="margin-right: 0.5rem; width: 5vw;" class="btn btn-primary">Edit</a>
+                    <button style="width: 5vw;" (click)="deleteById(c.id)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,31 @@
+<h2>Course Edit</h2>
+
+<hr/>
+
+<form #courseForm="ngForm">
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Description:</label>    
+        <div class="col-sm-10">
+            <input [(ngModel)]="course.description" required name="description" #courseDescription="ngModel" [ngClass]="{'is-invalid': courseDescription.invalid}" class="form-control">
+
+            <div class="invalid-feedback">
+                <span>Course description is required</span>
+            </div>
+        </div>        
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Menu:</label>    
+        <div class="col-sm-10">
+            <input [(ngModel)]="course.menu" required name="menu" #courseMenu="ngModel" [ngClass]="{'is-invalid': courseMenu.invalid}" class="form-control">
+            
+            <div class="invalid-feedback">
+                <span>Course menu is required</span>
+            </div>
+        </div>        
+    </div>
+
+    <button style="width: 5vw;" [routerLink]="['/courses']" class="btn btn-secondary mr-2">Back</button>
+    <button style="width: 5vw;" [disabled]="courseForm.invalid" (click)="save()" class="btn btn-primary">Save</button>
+</form>

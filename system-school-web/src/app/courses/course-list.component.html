@@ -1,0 +1,26 @@
+<app-course-registration></app-course-registration>
+
+<h2>Course List</h2>
+<table class="table table-striped">
+
+    <thead>
+        <tr>
+            <th style="width: 42%">Description</th>
+            <th style="width: 42%">Menu</th>
+            <th style="width: 16%">Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor='let c of filteredCourses'>
+            
+            <td style="width: 42%">{{ c.description }}</td>
+            <td style="width: 24%">{{ c.menu }}</td>
+            <td style="width: 16%">
+                <a [routerLink]="['/course/edit', c.id]" style="margin-right: 0.5rem; width: 5vw;" class="btn btn-primary mr-2">Edit</a>
+                <button style="width: 5vw;" (click)="deleteById(c.id)" class="btn btn-danger">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
