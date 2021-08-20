@@ -11,7 +11,7 @@
                 <div class="form-group" style="margin-right: 1rem">
                     <label for="course">Courses:</label>
                     <select [(ngModel)]="register.code_course" name="code_course" class="form-control">
-                        <option disabled>Select Courses</option>
+                        <option>Select Courses</option>
                         <option *ngFor="let course of courseList">{{ course.id }}</option>
                     </select>
                 </div>
@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label for="student">Students:</label>
                     <select [(ngModel)]="register.code_student" name="code_student" class="form-control">
-                        <option disabled>Select Students</option>
+                        <option>Select Students</option>
                         <option *ngFor="let student of studentList">{{ student.id }}</option>
                     </select>
                 </div>
